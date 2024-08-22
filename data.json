@@ -1,0 +1,14 @@
+[
+    {
+        "nombre": "Pancho Clásico",
+        "precio": 50,
+        "stock": 20,
+        "ingredientes": "Salchicha, Pan, Ketchup, Mostaza"
+    },
+    {
+        "nombre": "Pancho Completo",
+        "precio": 70,
+        "stock": 15,
+        "ingredientes": "Salchicha, Pan, Ketchup, Mostaza, Papas Fritas"
+    }
+]

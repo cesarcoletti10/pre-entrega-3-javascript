@@ -4,37 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Panchería</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    
 </head>
 <body>
     <h1>Simulador de Panchería</h1>
     
-    <div>
+    <nav>
+        <button id="btnAgregar">Agregar Pancho</button>
+        <button id="btnVentas">Ver Ventas</button>
+        <button id="btnBuscar">Buscar Pancho</button>
+    </nav>
+    
+    <section id="vistaPrincipal">
+        <h2>Lista de Panchos</h2>
+        <ul id="listaPanchos"></ul>
+    </section>
+    
+    <section id="vistaAgregar" class="oculto">
         <h2>Agregar Pancho</h2>
         <form id="formAgregar">
             <input type="text" id="nombre" placeholder="Nombre del pancho" required>
             <input type="number" id="precio" placeholder="Precio" required>
+            <input type="number" id="stock" placeholder="Stock" required>
             <input type="text" id="ingredientes" placeholder="Ingredientes (separados por comas)" required>
-            <select id="disponible">
-                <option value="true">Disponible</option>
-                <option value="false">No disponible</option>
-            </select>
             <button type="submit">Agregar</button>
         </form>
-    </div>
+    </section>
     
-    <div>
+    <section id="vistaVentas" class="oculto">
+        <h2>Ventas</h2>
+        <ul id="listaVentas"></ul>
+        <p>Total Ganado: $<span id="totalGanado">0</span></p>
+    </section>
+    
+    <section id="vistaBuscar" class="oculto">
         <h2>Buscar Pancho</h2>
         <input type="text" id="buscarNombre" placeholder="Nombre del pancho">
-        <button id="btnBuscar">Buscar</button>
-        <p id="resultadoBusqueda"></p>
-    </div>
-    
-    <div>
-        <h2>Lista de Panchos</h2>
-        <button id="btnMostrar">Mostrar todos los panchos</button>
-        <ul id="listaPanchos"></ul>
-    </div>
-
-    <script src="simulador.js"></script>
+        <button id="btnBuscarPancho">Buscar</button>
+        <div id="resultadoBusqueda"></div>
+    </section>
 </body>
 </html>
+
+
